@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script>(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('groleegni.net',8816847,document.createElement('script'))</script>
+    
+    
+    <meta name="description" content="Create, manage, and customize your own tweets with Twitter X Maker. A tool for designing and interacting with tweets.">
+    <meta name="author" content="Twitter X Maker Developer">
+    <meta property="og:title" content="Twitter X Maker">
+    <meta property="og:description" content="Create, manage, and customize your own tweets with Twitter X Maker. A tool for designing and interacting with tweets.">
+    <meta property="og:image" content="https://cdn-icons-png.flaticon.com/128/3670/3670151.png">
+    <meta property="og:url" content="1 + 1">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Twitter X Maker">
+    <meta name="twitter:description" content="Create, manage, and customize your own tweets with Twitter X Maker. A tool for designing and interacting with tweets.">
+    <meta name="twitter:image" content="https://cdn-icons-png.flaticon.com/128/3670/3670151.png">
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/128/3670/3670151.png">
+    <title>Twitter X Maker</title>
+    
+    <style>
+      /* General Styles */
+      body {
+          margin: 0;
+          padding: 0;
+          background-color: #000;
+          font-family: Arial, sans-serif;
+          color: #fff;
+      }
+
+      /* Tweet Container */
+      .tweet {
+          display: flex;
+          align-items: flex-start;
+          padding: 15px;
+          border-bottom: 1px solid #2f3336;
+          max-width: 600px;
+          margin: 20px auto;
+      }
+
+      /* Profile Picture */
+      .profile-pic img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 10px;
+      }
+
+      /* Tweet Content */
+      .tweet-content {
+          flex: 1;
+      }
+
+      /* Header */
+      .tweet-header {
+          display: flex;
+          align-items: center;
+          font-size: 14px;
+          margin-bottom: 5px;
+      }
+
+      .display-name {
+          font-weight: bold;
+          margin-right: 5px;
+      }
+
+      .verified-icon {
+          width: 16px;
+          height: 16px;
+          margin-right: 5px;
+      }
+
+      .username {
+          color: #6e767d;
+          margin-right: 5px;
+      }
+
+      .timestamp {
+          color: #6e767d;
+      }
+
+      /* Tweet Text */
+      .tweet-text {
+          font-size: 16px;
+          margin-bottom: 10px;
+      }
+
+      /* Actions */
+      .tweet-actions {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          font-size: 14px;
+          color: #6e767d;
+      }
+
+      .action {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          cursor: pointer;
+      }
+
+      .action img {
+          width: 15px;
+          height: 15px;
+          filter: invert(70%);
+      }
+      
+      
+        /* Footer Style */
+      .footer {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background-color: #222;
+          color: white;
+          text-align: center;
+          padding: 15px;
+          font-size: 16px;
+      }
+
+      .footer a {
+          text-decoration: none;
+          color: #fff;
+          display: inline-flex;
+          align-items: center;
+          gap: 10px;
+      }
+
+      .footer img {
+          width: 24px;
+          height: 24px;
+      }
+
+      .footer .footer-text {
+          margin-left: 10px;
+      }
+      
+    </style>
+</head>
+<body>
+    <div class="tweet">
+        <div class="profile-pic">
+            <input type="file" id="profilePic" accept="image/*" onchange="changeProfilePic(event)" style="display:none;">
+            <img src="https://media.licdn.com/dms/image/v2/D5635AQELyuQ5c6IN7A/profile-framedphoto-shrink_400_400/profile-framedphoto-shrink_400_400/0/1730658430214?e=1738098000&v=beta&t=e5i2RPP_mf1A-6J1T24xDPTnXbOll3e1nnJv8IMio7U" alt="Profile Picture" id="profileImg" onclick="document.getElementById('profilePic').click();">
+        </div>
+        <div class="tweet-content">
+            <div class="tweet-header">
+                <span class="display-name" contenteditable="true">Tweet Maker X</span>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/488px-Twitter_Verified_Badge.svg.png" alt="Verified" class="verified-icon">
+                <span class="username" contenteditable="true">@tweetmaker_</span>
+                <span class="timestamp" contenteditable="true">· now</span>
+            </div>
+            <div class="tweet-text" contenteditable="true">
+                To update your profile image, simply click on the profile icon. If you wish to modify the content, click here. For adjustments to the number of comments, analytics, likes, and more, just click on the numbers below (all elements are fully editable).
+            </div>
+            <div class="tweet-actions">
+                <div class="action"><img src="https://upload.wikimedia.org/wikipedia/commons/5/50/Twitter_Reply.png?20170922004241" alt="Comment"> <span contenteditable="true">999.5K</span></div>
+                <div class="action"><img src="https://cdn-icons-png.flaticon.com/128/3905/3905866.png" alt="Retweet"> <span contenteditable="true">22K</span></div>
+                <div class="action"><img src="https://cdn-icons-png.flaticon.com/128/535/535285.png" alt="Like"> <span contenteditable="true">332K</span></div>
+                <div class="action"><img src="https://cdn-icons-png.flaticon.com/128/2195/2195102.png" alt="Views"> <span contenteditable="true">521.2M</span></div>
+                <div class="action"><img src="https://cdn-icons-png.flaticon.com/128/1358/1358023.png" alt="Share"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Section -->
+    <div class="footer">
+        <a href="https://wa.me/+2348128885606?text=Hi%20boss%2C%20I'm%20contacting%20you%20from%20tweet%20maker%20X" target="_blank">
+            <img src="https://cdn-icons-png.flaticon.com/128/4423/4423697.png" alt="Contact Customer Care">
+            <span class="footer-text">Contact Customer Care</span>
+        </a>
+    </div>
+
+    <script>
+        function changeProfilePic(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function() {
+                    document.getElementById('profileImg').src = reader.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        }
+    </script>
+</body>
+</html>
